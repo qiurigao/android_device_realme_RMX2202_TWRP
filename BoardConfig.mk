@@ -23,6 +23,7 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
+TW_DEVICE_VERSION := 真我GT  By 秋水
 # Default device path for tree
 DEVICE_PATH := device/$(PRODUCT_BRAND)/$(TARGET_DEVICE)
 
@@ -50,6 +51,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
 # Kernel
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 TARGET_NO_KERNEL := false
 TARGET_KERNEL_ARCH := $(TARGET_ARCH)
 BOARD_KERNEL_IMAGE_NAME := Image.gz
@@ -83,7 +85,7 @@ BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 TARGET_KERNEL_SOURCE := kernel/realme/sm8350
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CONFIG := lahaina_defconfig
+TARGET_KERNEL_CONFIG := vendor/lahaina-gki_defconfig
 BOOT_KERNEL_MODULES := adsp_loader_dlkm.ko apr_dlkm.ko q6_notifier_dlkm.ko q6_pdr_dlkm.ko snd_event_dlkm.ko
 
 # Platform

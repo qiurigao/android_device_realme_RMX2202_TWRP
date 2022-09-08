@@ -16,3 +16,7 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/twrp_marmalade.mk
+
+ 
+COMMON_LUNCH_CHOICES := \
+    twrp_marmalade-eng
